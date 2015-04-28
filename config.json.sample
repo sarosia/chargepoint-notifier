@@ -1,0 +1,9 @@
+{
+    "username": "hello@world.com",
+    "password": "foobar"
+    "lat": 0,
+    "lng": 0,
+    "latDelta": 0.001,
+    "lngDelta": 0.001
+    "boxcarToken": "token"
+}
