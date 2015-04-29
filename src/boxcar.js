@@ -1,11 +1,12 @@
 var https = require("https");
 var querystring = require("querystring");
 
-exports.publish = function (accessToken, title, message) {
+exports.publish = function (accessToken, title, message, url) {
     var postData = querystring.stringify({
         "user_credentials": accessToken,
         "notification[title]": title,
-        "notification[message]": message
+        "notification[long_message]": title + "\n" + message,
+        "notification[open_url]": url
     });
    
     var options = {
