@@ -82,7 +82,7 @@ exports.start = function () {
                     boxcar.publish(config.boxcarToken,
                         totalAvailable + " charging stations are available.", 
                         "All available stations:\n" + availableStations.join("\n"),
-                        "http://neptune.local:3000/");
+                        config.boxcarUrl);
                 }
 
                 setTimeout(updateChargeSpots, 60 * 1000);
