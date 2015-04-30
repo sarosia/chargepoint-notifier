@@ -1,0 +1,19 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/core-ajax/core-ajax.html">
+<link rel="import" href="chargepoint-station.html">
+
+<polymer-element name="chargepoint-station-list">
+    <template bind="{{stations}}">
+        <core-ajax auto url="/stations" handleAs="json" on-core-response="{{onResponse}}"></core-ajax>
+        <template repeat="{{station in stations}}">
+            <chargepoint-station station="{{station}}" available="{{station.available}}"></chargepoint-station>
+        </template>
+    </template>
+    <script>
+        Polymer({
+            onResponse: function (event, response) {
+                this.stations = response.response;
+            }
+        });
+    </script>
+</polymer-element>

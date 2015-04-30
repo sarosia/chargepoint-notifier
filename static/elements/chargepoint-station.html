@@ -1,0 +1,25 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<polymer-element name="chargepoint-station" attributes="station"> 
+    <template>
+        <style>
+        .container {
+            padding: 10px;
+        }
+        </style>
+        <div class="container" horizontal layout>
+            <div>{{station.name}}</div>
+            <div flex></div>
+            <div>{{station.available}}/{{station.total}}</div>
+        </div>
+    </template>
+    <script>
+    Polymer({
+        stationChanged: function () {
+            if (this.station.available === 0) {
+                this.style.color = "red";
+            }
+        }
+    });
+    </script>
+</polymer-element>
