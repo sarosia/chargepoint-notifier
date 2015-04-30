@@ -9,7 +9,11 @@ var password = config.password;
 var stations = {};
 
 exports.getStations = function () {
-    return stations;
+    var ret = [];
+    for (var key in stations) {
+        ret.push(stations[key]);
+    }
+    return ret;
 };
 
 exports.start = function () {
