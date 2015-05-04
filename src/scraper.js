@@ -3,7 +3,7 @@ var colors = require("colors");
 var agent = require("./agent.js");
 var boxcar = require("./boxcar.js");
 
-var config = JSON.parse(fs.readFileSync("config.json", { encoding: "utf8" }));
+var config = JSON.parse(fs.readFileSync(process.env["HOME"] + "/.chargepoint.json", { encoding: "utf8" }));
 var username = config.username;
 var password = config.password;
 var stations = {};
