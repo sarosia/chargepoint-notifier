@@ -1,0 +1,8 @@
+#!/usr/bin/env node
+
+"use strict";
+
+process.bin = process.title = "chargepoint-notifier";
+
+var app = require("../lib/app.js");
+app.listen(3000);
