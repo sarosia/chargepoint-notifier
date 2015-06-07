@@ -17,7 +17,7 @@ exports.getStations = function () {
 };
 
 exports.start = function () {
-    agent.login(username, password).done(function (auth, error) {
+    agent.login(username, password).then(function (auth) {
 
         var totalAvailable = 0;
 
@@ -27,7 +27,7 @@ exports.start = function () {
             var latDelta = config.latDelta;
             var lngDelta = config.lngDelta;
 
-            agent.getChargeSpots(lat, lng, latDelta, lngDelta).done(function (value) {
+            agent.getChargeSpots(lat, lng, latDelta, lngDelta).then(function (value) {
                 // Only scrapes for free charging stations.
                 var summaries = JSON.parse(value)[0]["station_list"]["summaries"];
                 summaries.filter(function (station) {
