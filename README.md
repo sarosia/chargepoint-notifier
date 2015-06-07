@@ -37,4 +37,4 @@ You can access the chargepoint notifier webapp by browsing http://localhost:3000
 
 ## License
 
-Licensed under the MIT License
+[MIT](LICENSE)
