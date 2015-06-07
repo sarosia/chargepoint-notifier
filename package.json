@@ -1,0 +1,30 @@
+{
+  "name": "chargepoint-notifier",
+  "version": "0.1.0",
+  "dependencies": {
+    "colors": "^1.1.0",
+    "express": "^4.12.4"
+  },
+  "main": "lib/app.js",
+  "bin": {
+    "chargepoint-notifier": "bin/chargepoint-notifier"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "https://github.com/sarosia",
+  "license": "MIT",
+  "description": "A very simple nodejs program that keep scraping charge point station status and notify when there is avalaible charge station using boxcar.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarosia/chargepoint-notifier.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sarosia/chargepoint-notifier/issues"
+  },
+  "homepage": "https://github.com/sarosia/chargepoint-notifier#readme",
+  "keywords": [
+    "Chargepoint"
+  ]
+}
