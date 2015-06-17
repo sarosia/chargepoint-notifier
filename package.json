@@ -1,9 +1,10 @@
 {
   "name": "chargepoint-notifier",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "dependencies": {
     "colors": "^1.1.0",
-    "express": "^4.12.4"
+    "express": "^4.12.4",
+    "winston": "^1.0.0"
   },
   "main": "lib/app.js",
   "bin": {
